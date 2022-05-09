@@ -1,0 +1,76 @@
+﻿@using BootzorComponents.Components.Accordion
+@using BootzorComponents.Components.Alert
+@page "/components/alerts"
+
+<PageTitle>BlazorComponents - Bootzor</PageTitle>
+  
+<div class="appBootzor">
+    <header>
+        <BCHeader/>
+    </header>
+    <div class="appContent responsive"> 
+        <BCNSidebar/>
+        <BCArticleSection Title="Alerts">
+            <Description>
+                <p>Provide contextual feedback messages for user actions with different alert messages. 
+                   The element has a maximum horizontal size of 1024px.</p>
+            </Description>
+            <ComponentParameters>
+                <ParameterSection>
+                    <Name>TypeAlert</Name>
+                    <Type>string</Type>
+                    <TypeDescription>primary | success | fail | warning | info</TypeDescription>
+                    <Description>
+                        <p>Class that is assigned to it to establish its state</p>
+                    </Description>
+                </ParameterSection>
+                <ParameterSection>
+                    <Name>Icon</Name>
+                    <Type>string</Type>
+                    <TypeDescription>info | success | warning</TypeDescription>
+                    <Description>
+                        <p>Select an icon to display before the text</p>
+                    </Description>
+                </ParameterSection>
+            </ComponentParameters>
+            <Example>
+                // Default
+                &#60;<b>BZ_Alert</b>&#62;Alert TypeAlert : Default&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="primary"&#62;Alert TypeAlert : primary&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="success"&#62;Alert TypeAlert : success&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="fail"&#62;Alert TypeAlert : fail&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="warning"&#62;Alert TypeAlert : warning&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="info"&#62;Alert TypeAlert : info&#60;/<b>BZ_Alert</b>&#62;
+
+                // With links
+                &#60;<b>BZ_Alert</b>&#62;A example of alert &#60;a href="#"&#62;with link&#60;/a&#62;. Don't Click&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="primary"&#62;A example of alert &#60;a href="#"&#62;with link&#60;/a&#62;. Don't Click&#60;/<b>BZ_Alert</b>&#62;
+                ...
+
+                // With icons
+                &#60;<b>BZ_Alert</b> <i>Icon</i>="info" <i>TypeAlert</i>="primary"&#62;Alert TypeAlert : primary&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>Icon</i>="success" <i>TypeAlert</i>="success"&#62;Alert TypeAlert : success&#60;/<b>BZ_Alert</b>&#62;
+                &#60;<b>BZ_Alert</b> <i>Icon</i>="warning" <i>TypeAlert</i>="fail"&#62;Alert TypeAlert : fail&#60;/<b>BZ_Alert</b>&#62; 
+            </Example>
+            <Result>
+                <h4>Default</h4>
+                <BZ_Alert>Alert TypeAlert : Default</BZ_Alert>
+                <BZ_Alert TypeAlert="primary">Alert TypeAlert : primary</BZ_Alert>
+                <BZ_Alert TypeAlert="success">Alert TypeAlert : success</BZ_Alert>
+                <BZ_Alert TypeAlert="fail">Alert TypeAlert : fail</BZ_Alert>
+                <BZ_Alert TypeAlert="warning">Alert TypeAlert : warning</BZ_Alert>
+                <BZ_Alert TypeAlert="info">Alert TypeAlert : info</BZ_Alert>
+                
+                <h4>With links</h4>
+                <BZ_Alert>A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+                <BZ_Alert TypeAlert="primary">A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert> 
+                
+                <h4>With icons</h4>
+                <BZ_Alert Icon="info" TypeAlert="primary">Alert TypeAlert : primary</BZ_Alert>
+                <BZ_Alert Icon="success" TypeAlert="success">Alert TypeAlert : success</BZ_Alert>
+                <BZ_Alert Icon="warning" TypeAlert="fail">Alert TypeAlert : fail</BZ_Alert> 
+            </Result>
+        </BCArticleSection>   
+    </div>
+</div>
+

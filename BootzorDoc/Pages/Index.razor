@@ -1,9 +1,120 @@
-﻿@page "/"
+﻿@page "/bootzor"
+
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="app">
+    <div class="logo"></div>
+    <h1 class="mr-0">BlazorComponents - Bootzor</h1>
+    <div class="app-row">
+        <section>
+            <h2>Accordion</h2>
+            <hr />
+            <p>Component invoke:</p>
+<code>
+    <pre>
+    &#60;<b>BZ_Accordion</b> <i>Collapsed</i>=true&#62;
+        &#60;AccordionTitle>Title&#60;/AccordionTitle&#62;
+        &#60;AccordionContent&#62;
+                &#60;p style="padding: 4% 5% 2% 5%;"&#62;Text example&#60;/p&#62;
+            &#60;/AccordionContent&#62;
+    &#60;/<b>BZ_Accordion</b>&#62;
+    </pre>
+</code>
 
-Welcome to your new app.
+            <h3>Example</h3>
+                <BZ_Accordion Collapsed=true>
+                     <AccordionTitle>Press here to show/hide</AccordionTitle>
+                     <AccordionContent>
+                         <p style="padding: 4% 5% 2% 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac molestie mi. Etiam euismod in nibh quis facilisis. Donec ac lacinia dolor. Maecenas scelerisque, urna facilisis fringilla convallis, lectus sapien blandit nisi, quis rutrum arcu nisi sed risus. Mauris in suscipit risus, quis gravida odio. Nam eget gravida neque. Nullam sed mollis tellus.</p>
+                     </AccordionContent>
+                </BZ_Accordion>  
+                <BZ_Accordion Collapsed=true>
+                     <AccordionTitle>Press here to show/hide</AccordionTitle>
+                     <AccordionContent>
+                         <p style="padding: 4% 5% 2% 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac molestie mi. Etiam euismod in nibh quis facilisis. Donec ac lacinia dolor. Maecenas scelerisque, urna facilisis fringilla convallis, lectus sapien blandit nisi, quis rutrum arcu nisi sed risus. Mauris in suscipit risus, quis gravida odio. Nam eget gravida neque. Nullam sed mollis tellus.</p>
+                     </AccordionContent>
+                </BZ_Accordion>  
+        </section>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+        <section>
+            <h2>Alerts</h2>
+            <hr />
+            <p>Component invoke:</p>
+<code>
+    <pre> 
+    &#60;<b>BZ_Alert</b>&#62;Alert TypeAlert : Default&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="primary"&#62;Alert TypeAlert : primary&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="success"&#62;Alert TypeAlert : success&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="fail"&#62;Alert TypeAlert : fail&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="warning"&#62;Alert TypeAlert : warning&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="info"&#62;Alert TypeAlert : info&#60;/<b>BZ_Alert</b>&#62;
+    </pre>
+</code>
+ 
+            <h3>Example</h3>
+            <BZ_Alert>Alert TypeAlert : Default</BZ_Alert>
+            <BZ_Alert TypeAlert="primary">Alert TypeAlert : primary</BZ_Alert>
+            <BZ_Alert TypeAlert="success">Alert TypeAlert : success</BZ_Alert>
+            <BZ_Alert TypeAlert="fail">Alert TypeAlert : fail</BZ_Alert>
+            <BZ_Alert TypeAlert="warning">Alert TypeAlert : warning</BZ_Alert>
+            <BZ_Alert TypeAlert="info">Alert TypeAlert : info</BZ_Alert>
+            <br />
+            <h3>With link inside</h3>
+<code>
+    <pre> 
+    &#60;<b>BZ_Alert</b>&#62;A example of alert &#60;a href="#"&#62;with link&#60;/a&#62;. Don't Click&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>TypeAlert</i>="primary"&#62;A example of alert &#60;a href="#"&#62;with link&#60;/a&#62;. Don't Click&#60;/<b>BZ_Alert</b>&#62;
+    ...
+    </pre>
+</code>
+            <BZ_Alert>A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+            <BZ_Alert TypeAlert="primary">A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+            <BZ_Alert TypeAlert="success">A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+            <BZ_Alert TypeAlert="fail">A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+            <BZ_Alert TypeAlert="warning">A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+            <BZ_Alert TypeAlert="info">A example of alert <a href="#">with link</a>. Don't Click</BZ_Alert>
+            <br />
+            <h3>With icons</h3>
+<code>
+    <pre> 
+ 
+    &#60;<b>BZ_Alert</b> <i>Icon="info"</i> <i>TypeAlert</i>="primary"&#62;Alert TypeAlert : primary&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>Icon="success"</i> <i>TypeAlert</i>="success"&#62;Alert TypeAlert : success&#60;/<b>BZ_Alert</b>&#62;
+    &#60;<b>BZ_Alert</b> <i>Icon="warning"</i> <i>TypeAlert</i>="fail"&#62;Alert TypeAlert : fail&#60;/<b>BZ_Alert</b>&#62; 
+    </pre>
+</code>
+            <BZ_Alert Icon="info" TypeAlert="primary">Alert TypeAlert : primary</BZ_Alert>
+            <BZ_Alert Icon="success" TypeAlert="success">Alert TypeAlert : success</BZ_Alert>
+            <BZ_Alert Icon="warning" TypeAlert="fail">Alert TypeAlert : fail</BZ_Alert> 
+        </section>
+
+    </div>
+</div>
+
+@code{
+    // TODO 
+    /*
+     * CSS
+     * Badge
+     * Buttons
+     * Forms
+     * Tables
+     * Figures
+     * 
+     * COMPONENT
+     * Card
+     * Carousel
+     * Collapse
+     * Dropdowns
+     * Modal
+     * Tabs
+     * Pagination
+     * Popover
+     * Progress
+     * Scrollspy 
+     * Spinners
+     * Toast
+     * Tooltips
+     */
+}
