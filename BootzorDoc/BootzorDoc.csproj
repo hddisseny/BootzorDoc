@@ -10,4 +10,10 @@
     <ProjectReference Include="..\..\Bootzor\Bootzor\Bootzor.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Bootzor">
+      <HintPath>..\..\Bootzor\Bootzor\bin\Debug\net6.0\Bootzor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
