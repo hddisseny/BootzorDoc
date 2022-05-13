@@ -1,0 +1,52 @@
+﻿@using Bootzor.Components.Form
+
+@page "/components/autoform"
+
+<PageTitle>AutoForm</PageTitle>
+
+<div class="appBootzor">
+    <header>
+        <BCHeader/>
+    </header>
+    <div class="appContent responsive"> 
+        <BCNSidebar/> 
+                <BCArticleSection Title="ZorAutoForm">
+            <Description>
+                <p>Form created automatly.</p>
+            </Description>
+            <ComponentParameters>
+                <ParameterSection>
+                    <Name>Type</Name>
+                    <Type>class</Type>
+                    <TypeDescription>a class</TypeDescription>
+                    <Description>
+                        <p>Description</p>
+                    </Description>
+                </ParameterSection>               
+            </ComponentParameters>
+            <Example>
+                &#60;<b>ZorAutoForm</b> &#62;
+
+            </Example>
+            <Result>
+
+                <ZorAutoForm TObjectForm=Ejemplo CustomObject=@ejemplo>
+
+                </ZorAutoForm>
+
+            </Result>
+        </BCArticleSection> 
+    </div>
+</div>
+
+@code {
+
+    public Ejemplo ejemplo = new();
+
+    protected override void OnInitialized()
+    {
+        ejemplo.EstoEsUnBool = true;
+        ejemplo.EstoEsUnInt = 2;
+        ejemplo.EstoEsUnString = "Ramón";
+    }
+}
